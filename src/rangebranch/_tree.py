@@ -738,7 +738,7 @@ class _BaseAdaptiveRangeTree(BaseEstimator):
         if not np.all(np.isfinite(weights)) or np.any(weights < 0):
             raise ValueError("sample_weight must contain finite, non-negative values.")
         if np.sum(weights) <= 0:
-            raise ValueError("sample_weight must have a positive total.")
+            raise ValueError("sample_weight must contain at least one non-zero value.")
         return weights
 
     def _validate_hyperparameters(self) -> None:

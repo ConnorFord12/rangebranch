@@ -1,6 +1,16 @@
 import numpy as np
+import pytest
 
 from rangebranch import AdaptiveRangeTreeClassifier
+
+
+def test_all_zero_sample_weights_are_rejected():
+    with pytest.raises(ValueError, match="weight.*zero"):
+        AdaptiveRangeTreeClassifier().fit(
+            [[0.0], [1.0]],
+            [0, 1],
+            sample_weight=[0.0, 0.0],
+        )
 
 
 def test_missing_values_can_receive_separate_child():
