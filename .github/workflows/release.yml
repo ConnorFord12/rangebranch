@@ -1,6 +1,8 @@
 name: Release
 
 on:
+  push:
+    branches: [main]
   release:
     types: [published]
   workflow_dispatch:
@@ -62,7 +64,10 @@ jobs:
           repository-url: https://test.pypi.org/legacy/
 
   publish-pypi:
-    if: github.event_name == 'release'
+    if: >-
+      github.event_name == 'release' ||
+      (github.event_name == 'push' &&
+      github.event.head_commit.message == 'Publish RangeBranch 0.1.0a1 to PyPI')
     needs: build
     runs-on: ubuntu-latest
     environment:
