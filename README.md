@@ -1,6 +1,7 @@
 # RangeBranch
 
 [![Tests](https://github.com/ConnorFord12/rangebranch/actions/workflows/tests.yml/badge.svg)](https://github.com/ConnorFord12/rangebranch/actions/workflows/tests.yml)
+[![PyPI version](https://img.shields.io/pypi/v/rangebranch.svg)](https://pypi.org/project/rangebranch/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status: Alpha](https://img.shields.io/badge/status-alpha-orange.svg)](https://github.com/ConnorFord12/rangebranch/releases)
